@@ -31,6 +31,13 @@ class CPFocusRing: UIView {
         imageView.image = image
         imageView.contentMode = .scaleAspectFill
 
+        let ringView = CPRingView()
+        ringView.widthAnchor.constraint(equalToConstant: self.frame.width).isActive = true
+        ringView.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
+        //ringView.backgroundColor = UIColor.yellow
+        ringView.setImage(image: image)
+        
+        
         //Text Label
         let textLabel = UILabel()
         textLabel.backgroundColor = UIColor.yellow
@@ -47,6 +54,7 @@ class CPFocusRing: UIView {
         stackView.spacing   = 16.0
 
         stackView.addArrangedSubview(imageView)
+        stackView.addArrangedSubview(ringView)
         stackView.addArrangedSubview(textLabel)
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
