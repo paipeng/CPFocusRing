@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import CPFocusRing
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var focusRing: CPFocusRing!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        focusRing.setDelegate(delegate: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,3 +26,10 @@ class ViewController: UIViewController {
 
 }
 
+
+extension ViewController: CPFocusRingDelegate {
+    func focus(focusDistance: CGFloat) {
+        print("focus: \(focusDistance)")
+    }
+    
+}

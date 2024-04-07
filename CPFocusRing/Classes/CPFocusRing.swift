@@ -7,7 +7,8 @@
 
 import UIKit
 
-class CPFocusRing: UIView {
+@objc public class CPFocusRing: UIView {
+    var ringView: CPRingView?
     // for using in code
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,11 +32,11 @@ class CPFocusRing: UIView {
         imageView.image = image
         imageView.contentMode = .scaleAspectFill
 
-        let ringView = CPRingView(frame: CGRectMake(0, 0, self.frame.width, 80))
-        ringView.widthAnchor.constraint(equalToConstant: self.frame.width).isActive = true
-        ringView.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
+        ringView = CPRingView(frame: CGRectMake(0, 0, self.frame.width, 80))
+        ringView!.widthAnchor.constraint(equalToConstant: self.frame.width).isActive = true
+        ringView!.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
         //ringView.backgroundColor = UIColor.yellow
-        ringView.setImage(image: image)
+        ringView!.setImage(image: image)
         
         
         //Text Label
@@ -54,7 +55,7 @@ class CPFocusRing: UIView {
         stackView.spacing   = 16.0
 
         stackView.addArrangedSubview(imageView)
-        stackView.addArrangedSubview(ringView)
+        stackView.addArrangedSubview(ringView!)
         stackView.addArrangedSubview(textLabel)
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
@@ -65,5 +66,9 @@ class CPFocusRing: UIView {
         stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
         self.backgroundColor = .blue
+    }
+    
+    open func setDelegate(delegate: CPFocusRingDelegate) {
+        self.ringView!.delegate = delegate
     }
 }

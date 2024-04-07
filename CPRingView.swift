@@ -8,6 +8,8 @@
 import UIKit
 
 class CPRingView: UIView {
+    weak var delegate: CPFocusRingDelegate? = nil
+    
     var lastPoint = CGPoint.zero
     var swiped = false
     var image: UIImage?
@@ -57,7 +59,7 @@ class CPRingView: UIView {
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touchesMoved")
+        //print("touchesMoved")
         guard let touch = touches.first else {
             return
         }
@@ -107,7 +109,7 @@ class CPRingView: UIView {
         super.draw(rect)
         
         var ringRect: CGRect = rect
-        print("function draw is called: \(focus) \(ringRect.size.height * self.image!.size.width / self.image!.size.height)")
+        //print("function draw is called: \(focus) \(ringRect.size.height * self.image!.size.width / self.image!.size.height)")
 
         // Drawing code
         ringRect.size.width = ringRect.size.height * self.image!.size.width / self.image!.size.height
@@ -122,5 +124,12 @@ class CPRingView: UIView {
         self.image!.draw(in: ringRect)
         
 
+        if (self.delegate != nil) {
+            self.delegate?.focus(focusDistance: focus)
+        }
+    }
+    
+    func setDelegate(delegate: CPFocusRingDelegate) {
+        self.delegate = delegate
     }
 }

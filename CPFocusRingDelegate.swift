@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+@objc public protocol CPFocusRingDelegate: AnyObject {
+    func focus(focusDistance: CGFloat)
+    
+}
