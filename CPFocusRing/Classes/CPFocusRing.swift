@@ -31,7 +31,7 @@ class CPFocusRing: UIView {
         imageView.image = image
         imageView.contentMode = .scaleAspectFill
 
-        let ringView = CPRingView()
+        let ringView = CPRingView(frame: CGRectMake(0, 0, self.frame.width, 80))
         ringView.widthAnchor.constraint(equalToConstant: self.frame.width).isActive = true
         ringView.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
         //ringView.backgroundColor = UIColor.yellow

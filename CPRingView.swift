@@ -13,6 +13,7 @@ class CPRingView: UIView {
     var image: UIImage?
     var focusRing: CGFloat = 0
     var focus: CGFloat = 0
+    var focusRingView: UIImageView?
     
     // for using in code
     override init(frame: CGRect) {
@@ -27,7 +28,17 @@ class CPRingView: UIView {
     }
     
     private func initView() {
+        print("initView: \(self.frame)")
+        //imageView.backgroundColor = UIColor.yellow
+        let bundle = Bundle(for: CPFocusRing.self)
+        let image = UIImage(named: "FocusRing", in: bundle, compatibleWith: nil)!
         
+        focusRingView = UIImageView(image: image)
+        focusRingView!.frame = self.frame;
+        //imageView.image = image
+        //imageView.contentMode = .scaleToFill
+        //focusRingView!.backgroundColor = .cyan
+        self.addSubview(focusRingView!)
     }
     
     public func setImage(image: UIImage) {
@@ -94,6 +105,7 @@ class CPRingView: UIView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
+        
         var ringRect: CGRect = rect
         print("function draw is called: \(focus) \(ringRect.size.height * self.image!.size.width / self.image!.size.height)")
 
