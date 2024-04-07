@@ -1,0 +1,66 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : false,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e987324ababee707f17676f9d55d994251d"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e9821ded137e13bbb9a6e2b86de32ed2bd2"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98c78ee0e3b2104510dc7b23eff50fd574"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e984a59dab112f7b65b59418d4daf80eb6a"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e9889c0eb6f4ca23cafab0ffff176b36768"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e9895772c4763e7832335655d41c35a9693"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98b9d83c36e85da1fe1c0a616d4a8fe09a"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e980becef97401e8f56afe46492890a8634"
+    }
+  ],
+  "containerPath" : "/Users/paipeng/Development/xcode_project/CPFocusRing/Example/Pods/Pods.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/paipeng/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/paipeng/Library/Developer/Xcode/DerivedData/Pods-awllpbdvkwapxwgmmpaamxqyxlaz/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/paipeng/Library/Developer/Xcode/DerivedData/Pods-awllpbdvkwapxwgmmpaamxqyxlaz/Index.noindex/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : true,
+  "useImplicitDependencies" : false,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : false
+}

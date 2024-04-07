@@ -1,0 +1,6 @@
+framework module CPFocusRing {
+  umbrella header "CPFocusRing-umbrella.h"
+
+  export *
+  module * { export * }
+}

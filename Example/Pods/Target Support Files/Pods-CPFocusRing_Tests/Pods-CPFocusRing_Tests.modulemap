@@ -1,0 +1,6 @@
+framework module Pods_CPFocusRing_Tests {
+  umbrella header "Pods-CPFocusRing_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
