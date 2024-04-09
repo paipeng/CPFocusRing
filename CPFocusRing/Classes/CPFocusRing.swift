@@ -78,7 +78,7 @@ import UIKit
         stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
-        self.backgroundColor = .blue
+        self.backgroundColor = .red
     }
     
     open func setDelegate(delegate: CPFocusRingDelegate) {
