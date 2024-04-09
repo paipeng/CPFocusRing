@@ -125,7 +125,7 @@ class CPRingView: UIView {
         
 
         if (self.delegate != nil) {
-            self.delegate?.focus(focusDistance: focus)
+            self.delegate?.focus(focusDistance: abs(focus / (ringRect.size.width-self.frame.width)))
         }
     }
     
