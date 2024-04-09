@@ -88,6 +88,7 @@
 		7343327C2BC4EAAA00C25C56 /* CPFocusRingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7343327A2BC4EAAA00C25C56 /* CPFocusRingDelegate.swift */; };
 		7343327D2BC4EAAA00C25C56 /* CPRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7343327B2BC4EAAA00C25C56 /* CPRingView.swift */; };
 		7343327F2BC51EF000C25C56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7343327E2BC51EF000C25C56 /* Assets.xcassets */; };
+		734332812BC5361D00C25C56 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734332802BC5361D00C25C56 /* UIImage+Extension.swift */; };
 		73AF580A2BC245A80005CB2A /* CPFocusRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF58092BC245A80005CB2A /* CPFocusRing.swift */; };
 		74339C58AC4E5631FB8C0E662668A796 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEDD1046FDB589E80009C03C39384A9 /* UIApplication+StrictKeyWindow.m */; };
 		75B395EB1C611F2FF14C1DF836FC5074 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
@@ -357,6 +358,7 @@
 		7343327A2BC4EAAA00C25C56 /* CPFocusRingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CPFocusRingDelegate.swift; path = CPFocusRing/Classes/CPFocusRingDelegate.swift; sourceTree = "<group>"; };
 		7343327B2BC4EAAA00C25C56 /* CPRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CPRingView.swift; path = CPFocusRing/Classes/CPRingView.swift; sourceTree = "<group>"; };
 		7343327E2BC51EF000C25C56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CPFocusRing/Assets.xcassets; sourceTree = "<group>"; };
+		734332802BC5361D00C25C56 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImage+Extension.swift"; path = "CPFocusRing/Classes/UIImage+Extension.swift"; sourceTree = "<group>"; };
 		73AF58092BC245A80005CB2A /* CPFocusRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CPFocusRing.swift; path = CPFocusRing/Classes/CPFocusRing.swift; sourceTree = "<group>"; };
 		74F4407682EAFA9794947E787F98EB91 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "src/iOSSnapshotTestCaseCore/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		752486F299AB1B2C3CFDA0A0822B77D2 /* XCTestObservationCenter+CurrentTestCaseTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestObservationCenter+CurrentTestCaseTracker.m"; path = "Nimble_Snapshots/XCTestObservationCenter+CurrentTestCaseTracker.m"; sourceTree = "<group>"; };
@@ -973,6 +975,7 @@
 				3A01DAEDA486CC4ECF049F9602A9F80B /* Pod */,
 				9E38E49219075338856F3C9A7AF768C7 /* Support Files */,
 				73AF58092BC245A80005CB2A /* CPFocusRing.swift */,
+				734332802BC5361D00C25C56 /* UIImage+Extension.swift */,
 			);
 			name = CPFocusRing;
 			path = ../..;
@@ -1388,6 +1391,7 @@
 			files = (
 				7343327C2BC4EAAA00C25C56 /* CPFocusRingDelegate.swift in Sources */,
 				7343327D2BC4EAAA00C25C56 /* CPRingView.swift in Sources */,
+				734332812BC5361D00C25C56 /* UIImage+Extension.swift in Sources */,
 				A36811C1A03DBCE09F84B04FDD078E06 /* CPFocusRing-dummy.m in Sources */,
 				73AF580A2BC245A80005CB2A /* CPFocusRing.swift in Sources */,
 			);

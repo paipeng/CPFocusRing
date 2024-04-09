@@ -23,7 +23,7 @@ import UIKit
     
     private func initView() {
         let bundle = Bundle(for: CPFocusRing.self)
-        let image = UIImage(named: "Scale", in: bundle, compatibleWith: nil)!
+        var image = UIImage(named: "Scale", in: bundle, compatibleWith: nil)!
         
         //Image View
         /*
@@ -35,11 +35,21 @@ import UIKit
         imageView.contentMode = .scaleAspectFill
          */
 
+        print("frame size: \(self.frame.width)")
         ringView = CPRingView(frame: CGRectMake(0, 0, self.frame.width, 80))
         ringView!.widthAnchor.constraint(equalToConstant: self.frame.width).isActive = true
         ringView!.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
         //ringView.backgroundColor = UIColor.yellow
+        print("ringView width: \(ringView?.frame.size.width)")
+        
+        print("image size: \(image.size)")
+        let offsetX = (self.frame.size.width - 240 - 24)/2 * 120 / 192
+        print("offsetX: \(offsetX)")
+        //offsetX = 0
+        image = image.cropImage(rect: CGRectMake(offsetX, 0, image.size.width - offsetX * 2, image.size.height))!
+        print("crop image size: \(image.size)")
         ringView!.setImage(image: image)
+
         /*
         //Text Label
         let textLabel = UILabel()
