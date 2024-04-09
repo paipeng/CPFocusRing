@@ -22,23 +22,25 @@ import UIKit
     }
     
     private func initView() {
+        let bundle = Bundle(for: CPFocusRing.self)
+        let image = UIImage(named: "Scale", in: bundle, compatibleWith: nil)!
+        
         //Image View
+        /*
         let imageView = UIImageView()
         //imageView.backgroundColor = UIColor.yellow
         imageView.heightAnchor.constraint(equalToConstant: 60.0).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: self.frame.width).isActive = true
-        let bundle = Bundle(for: CPFocusRing.self)
-        let image = UIImage(named: "Scale", in: bundle, compatibleWith: nil)!
         imageView.image = image
         imageView.contentMode = .scaleAspectFill
+         */
 
         ringView = CPRingView(frame: CGRectMake(0, 0, self.frame.width, 80))
         ringView!.widthAnchor.constraint(equalToConstant: self.frame.width).isActive = true
         ringView!.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
         //ringView.backgroundColor = UIColor.yellow
         ringView!.setImage(image: image)
-        
-        
+        /*
         //Text Label
         let textLabel = UILabel()
         textLabel.backgroundColor = UIColor.yellow
@@ -46,6 +48,7 @@ import UIKit
         textLabel.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
         textLabel.text  = "Hi World"
         textLabel.textAlignment = .center
+         */
 
         //Stack View
         let stackView   = UIStackView()
@@ -54,9 +57,9 @@ import UIKit
         stackView.alignment = UIStackView.Alignment.center
         stackView.spacing   = 16.0
 
-        stackView.addArrangedSubview(imageView)
+        //stackView.addArrangedSubview(imageView)
         stackView.addArrangedSubview(ringView!)
-        stackView.addArrangedSubview(textLabel)
+        //stackView.addArrangedSubview(textLabel)
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
         self.addSubview(stackView)
