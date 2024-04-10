@@ -10,7 +10,7 @@ import UIKit
 @objc public class CPFocusRing: UIView {
     var ringView: CPRingView?
     // for using in code
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         self.initView()
     }
