@@ -16,12 +16,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        let focusRing = CPFocusRing(frame:CGRectMake(0,0, self.view.frame.size.width, 80))
+        focusRing.layer.borderColor = UIColor.green.cgColor
+        focusRing.layer.borderWidth = 2
+        
+        self.view.addSubview(focusRing)
+        
         focusRing.setDelegate(delegate: self)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 
 }
