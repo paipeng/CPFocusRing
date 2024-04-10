@@ -89,6 +89,7 @@
 		7343327D2BC4EAAA00C25C56 /* CPRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7343327B2BC4EAAA00C25C56 /* CPRingView.swift */; };
 		7343327F2BC51EF000C25C56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7343327E2BC51EF000C25C56 /* Assets.xcassets */; };
 		734332812BC5361D00C25C56 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734332802BC5361D00C25C56 /* UIImage+Extension.swift */; };
+		735DD8052BC6370000A8BBAF /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 7343327E2BC51EF000C25C56 /* Assets.xcassets */; };
 		73AF580A2BC245A80005CB2A /* CPFocusRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF58092BC245A80005CB2A /* CPFocusRing.swift */; };
 		74339C58AC4E5631FB8C0E662668A796 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEDD1046FDB589E80009C03C39384A9 /* UIApplication+StrictKeyWindow.m */; };
 		75B395EB1C611F2FF14C1DF836FC5074 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
@@ -1389,6 +1390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				735DD8052BC6370000A8BBAF /* Assets.xcassets in Sources */,
 				7343327C2BC4EAAA00C25C56 /* CPFocusRingDelegate.swift in Sources */,
 				7343327D2BC4EAAA00C25C56 /* CPRingView.swift in Sources */,
 				734332812BC5361D00C25C56 /* UIImage+Extension.swift in Sources */,
