@@ -50,7 +50,7 @@ import UIKit
         print("ringView width: \(ringView?.frame.size.width)")
         
         print("image size: \(image.size)")
-        let offsetX = (self.frame.size.width - 240 - 24)/2 * 120 / 192
+        let offsetX = (self.frame.size.width - 240)/2 * 40 / 152
         print("offsetX: \(offsetX)")
         //offsetX = 0
         image = image.cropImage(rect: CGRectMake(offsetX, 0, image.size.width - offsetX * 2, image.size.height))!
