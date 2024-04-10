@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'CPFocusRing/Classes/**/*'
   
   s.resource_bundles = {
-     'CPFocusRing' => ['CPFocusRing/Assets/*.png', 'CPFocusRing/Assets.xcassets/**/*.{xib,storyboard,xcassets}']
+     'CPFocusRing' => ['CPFocusRing/Assets.xcassets/**/*.{xib,storyboard,xcassets,json,imageset,png}']
 }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
