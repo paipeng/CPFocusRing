@@ -32,8 +32,19 @@ class CPRingView: UIView {
     private func initView() {
         print("initView: \(self.frame)")
         //imageView.backgroundColor = UIColor.yellow
-        let bundle = Bundle(for: CPFocusRing.self)
-        let image = UIImage(named: "FocusRing", in: bundle, compatibleWith: nil)!
+        //let bundle = Bundle(for: CPFocusRing.self)
+        //let image = UIImage(named: "FocusRing", in: bundle, compatibleWith: nil)!
+        
+        var image: UIImage
+        let podBundle = Bundle(for: CPFocusRing.self)
+        if let path = podBundle.path(forResource: "CPFocusRing", ofType: "bundle") {
+            let bundle = Bundle(path: path)!
+            image = UIImage(named: "FocusRing", in: bundle, compatibleWith: nil)!
+        } else {
+            image = UIImage(named: "FocusRing", in: podBundle, compatibleWith: nil)!
+            
+        }
+        
         
         focusRingView = UIImageView(image: image)
         focusRingView!.frame = self.frame;

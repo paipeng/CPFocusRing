@@ -22,8 +22,15 @@ import UIKit
     }
     
     private func initView() {
-        let bundle = Bundle(for: CPFocusRing.self)
-        var image = UIImage(named: "Scale", in: bundle, compatibleWith: nil)!
+        var image: UIImage
+        let podBundle = Bundle(for: CPFocusRing.self)
+        if let path = podBundle.path(forResource: "CPFocusRing", ofType: "bundle") {
+            let bundle = Bundle(path: path)!
+            image = UIImage(named: "Scale", in: bundle, compatibleWith: nil)!
+        } else {
+            image = UIImage(named: "Scale", in: podBundle, compatibleWith: nil)!
+            
+        }
         
         //Image View
         /*
