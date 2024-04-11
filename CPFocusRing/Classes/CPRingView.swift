@@ -16,6 +16,7 @@ class CPRingView: UIView {
     var focusRing: CGFloat = 0
     var focus: CGFloat = 0
     var focusRingView: UIImageView?
+    var focusDistance: CGFloat = 0
     
     // for using in code
     override init(frame: CGRect) {
@@ -133,11 +134,21 @@ class CPRingView: UIView {
         ringRect.origin.x = focus
         
         self.image!.draw(in: ringRect)
-        
+        focusDistance = abs(focus / (ringRect.size.width-self.frame.width))
 
         if (self.delegate != nil) {
-            self.delegate?.focus(focusDistance: abs(focus / (ringRect.size.width-self.frame.width)))
+            self.delegate?.focus(focusDistance: focusDistance)
         }
+    }
+    
+    func setFocusDistance(focusDistance: CGFloat) {
+        self.focusDistance = focus
+        var ringRect: CGRect = self.frame
+        ringRect.size.width = ringRect.size.height * self.image!.size.width / self.image!.size.height
+
+        self.focus = -1.0 * focusDistance * (ringRect.size.width-self.frame.width)
+        print("setFocusDistance: \(focusDistance) - \(self.focus)")
+        setNeedsDisplay()
     }
     
     func setDelegate(delegate: CPFocusRingDelegate) {
